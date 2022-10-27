@@ -5,26 +5,26 @@ class ApplicationController < ActionController::Base
   # ================================
 
   def homepage
-    render({:template=>"game_templates/rules.html.erb"})
+    render({:template=>"game_templates/rules.html.erb",:layout=>"wrapper.html.erb"})
   end
 
   def play_rock
 
    #redirect_to("https://www.wikipedia.org")
    #render({:html=>"<h1>Hello,world!</h1>".html_safe})
-   render({:template=>"game_templates/user_rock.html.erb"})
+   render({:template=>"game_templates/user_rock.html.erb",:layout=>"wrapper.html.erb"})
 
 end
 
    def play_paper
 
-  render({:template=>"game_templates/user_paper.html.erb"})
+  render({:template=>"game_templates/user_paper.html.erb",:layout=>"wrapper.html.erb"})
 
 end
 
 def play_scissors
 
-  render({:template=>"game_templates/user_scissors.html.erb"})
+  render({:template=>"game_templates/user_scissors.html.erb",:layout=>"wrapper.html.erb"})
 
 end
 end
